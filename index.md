@@ -2,7 +2,7 @@
 title: '¡Hola mundo!'
 subtitle: <h4 style="font-style:normal">Curso de minería de texto en R</h4>
 author: <h4 style="font-style:normal">Manuel Toral</h4>
-date: <h4 style="font-style:normal">Agosto 2021</h4>
+date: <h4 style="font-style:normal">2021-08-01</h4>
 output: 
   html_document:
     toc: true
