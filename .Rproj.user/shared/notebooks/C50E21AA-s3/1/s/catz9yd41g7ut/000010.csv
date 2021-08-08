@@ -1,0 +1,5 @@
+"0","texts(mx_2010)
+"
+"2","Error in UseMethod(""texts"") : 
+  no applicable method for 'texts' applied to an object of class ""c('dfm', 'dgCMatrix', 'CsparseMatrix', 'dsparseMatrix', 'generalMatrix', 'dCsparseMatrix', 'dMatrix', 'sparseMatrix', 'compMatrix', 'Matrix', 'xMatrix', 'mMatrix', 'Mnumeric', 'replValueSp')""
+"

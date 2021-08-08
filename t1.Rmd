@@ -1,0 +1,125 @@
+---
+title: "Tarea 1"
+subtitle: <h4 style="font-style:normal">Tarea 1</h4>
+date: <h4 style="font-style:normal">Febrero/MArzo 2021</h4>
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    theme: cosmo
+---
+
+
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+.figure {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+h1.title {
+  font-weight: bold;
+  font-family: Arial;  
+}
+
+h2.title {
+  font-family: Arial;  
+}
+
+</style>
+
+
+<style type="text/css">
+#TOC {
+  font-size: 13px;
+  font-family: Arial;
+}
+</style>
+
+\
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Las tareas de este curso serán menos guiadas, pero tratarán de estimular de manera más intensa su creatividad para resolver problemas.
+
+Por ejemplo, esta semana la idea es participar en la dinámica de *#tidytuesday* y compartir alguna visualización con la comunidad de internet. La base de esta semana (puedes ver el repositorio y el calendario [aquí](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-02/readme.md)) se trata de los anuncios del Super Tazón. 
+
+Utiliza las bibliotecas que vimos en clase para hacer una visualición como más te guste.
+
+
+1. Carga las bibliotecas.
+
+2. Carga los datos y exploralos con `glimpse`.
+
+```{r}
+youtube <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-02/youtube.csv')
+```
+
+
+¿Qué observas de la base?, ¿qué datos te podrían servir para graficar algo?
+
+Hay un grupo de variables dicotómicas que permite observar el principal característica de cada comercial, ¿cómo podrías usarlo?
+
+3. Planea tu gráfica. En una hoja de papel o lienzo de paint dibuja cómo imaginas tu gráfica.
+
+Algunas ideas:
+
+- ¿Cuál es la empresa que más comerciales ha tenido para el medio tiempo del Súper Bowl?
+
+```{r, echo=F}
+library(tidyverse)
+```
+
+
+```{r}
+conteo_marca <- youtube %>% 
+  count(brand) %>% 
+  arrange(-n)
+
+
+ggplot(conteo_marca,
+       aes(x=reorder(brand, -n), 
+           y=n)) +
+  geom_col()
+
+```
+
+
+- ¿Qué empresa ha tenido más vistas a través de los años? 
+
+```{r}
+vistas <- youtube %>%
+  group_by(brand) %>% 
+  summarise(vistas_totales = sum(like_count, na.rm=T)) 
+
+ggplot(vistas,
+       aes(x=brand,
+       y=vistas_totales/1000)
+       ) +
+  ggalt::geom_lollipop()
+```
+
+- **¿Cuál es la empresa más odiada?** Puedes hacer una variable con `mutate` que de el total de *likes* menos *dislikes*, agrupar por marca, sumarizar  el promedio de ese número y graficarla con un `geom_col`.
+
+- **¿El uso de sexo para vender se ha acentuado con los años?** Al ser dicotómica, la variable `use_sex` puede ser sumada como un número. Utiliza esa característica para sumar el número de comerciales que tienen como tema principal el sexo para vender agrupados por años. Grafica con una línea. 
+
+Recuerda que puedes usar `facet_wrap()` o una animación para aprovechar la variable "year"-
+
+
+4. Usa `theme()` o alguno de los temas precargados para modificar lo que no te guste y añade las `labs()` necesarias.
+
+
+
+

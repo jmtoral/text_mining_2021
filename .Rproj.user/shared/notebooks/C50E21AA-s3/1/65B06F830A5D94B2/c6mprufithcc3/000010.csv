@@ -1,0 +1,5 @@
+"0","design = svydesign(id=~UPM_DIS,strata=~EST_DIS, weights=~envipe$FAC_ELE, data=envipe)
+"
+"2","Error in 1/as.matrix(weights) : 
+  argumento no-numérico para operador binario
+"

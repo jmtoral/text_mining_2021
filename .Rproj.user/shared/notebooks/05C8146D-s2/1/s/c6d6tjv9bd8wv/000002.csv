@@ -1,0 +1,4 @@
+"0","pacman::p_load(tidyverse,"
+"0","               tidytext,"
+"0","               rvest,"
+"0","               quanteda)"

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>¡Hola mundo!</title>
+
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Minería de texto</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Código
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="s1.html">Sesión 1</a>
+    </li>
+    <li>
+      <a href="s2.html">Sesión 2</a>
+    </li>
+    <li>
+      <a href="s3.html">Sesión 3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tareas
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="t1.html">Tarea 1</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">Acerca del instructor</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jmtoral/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:jmtoralcruz@gmail.com">
+    <span class="fa fa-envelope-o fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/jmtoralc">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">¡Hola mundo!</h1>
+<h3 class="subtitle"><h4 style="font-style:normal">
+Curso de minería de texto en R
+</h4></h3>
+<h4 class="author"><h4 style="font-style:normal">
+Manuel Toral
+</h4></h4>
+<h4 class="date"><h4 style="font-style:normal">
+Agosto 2021
+</h4></h4>
+
+</div>
+
+
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+.figure {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+h1.title {
+  font-weight: bold;
+  font-family: Arial;  
+}
+
+h2.title {
+  font-family: Arial;  
+}
+
+</style>
+<style type="text/css">
+#TOC {
+  font-size: 13px;
+  font-family: Arial;
+}
+</style>
+</style>
+<p><br />
+</p>
+<p>¡Hola! Bienvenida al curso intermedio de R para el personal del IMCO. En esta página encontrarás:</p>
+<ul>
+<li>Un syllabus con las sesiones y temas que veremos</li>
+<li>El código que usaremos en las sesiones</li>
+<li>Laboratorios y tareas</li>
+</ul>
+<div id="acerca-del-curso" class="section level2">
+<h2>Acerca del curso</h2>
+<p>Aquí iría una breve explicación del curso :) <strong>R</strong></p>
+<p><br></p>
+<p>Abajo encontrarán los materiales que se presentaron en la primera parte de este curso. Adicionales, me gustaría incluir los siguientes:</p>
+<ul>
+<li><p><a href="https://www.tidytextmining.com/">Silge &amp; Robinson - Text Mining with R</a></p></li>
+<li><p><a href="https://quanteda.io/index.html">Benoit - quanteda: An R package for the quantitative analysis of textual data</a></p></li>
+<li><p><a href="https://plotly.com/r/">rOpenSci - Plotly: The front end for ML and data science models</a></p></li>
+<li><p><a href="https://rstudio.github.io/leaflet/">The “leaflet” R package</a></p></li>
+<li><p><a href="https://exts.ggplot2.tidyverse.org/gallery/">ggplot2 extensions gallery</a></p></li>
+</ul>
+<p><br> <br> <br> <br></p>
+</div>
+<div id="cómo-instalo-y-uso-r" class="section level2">
+<h2>¿ Cómo instalo (y uso) <code>R</code>?</h2>
+<p>Para este curso vamos a trabajar, desde el principio, con código en <code>R</code>. Es necesario tener <strong>la última versión</strong> de este lenguaje, al momento de escribir este repositorio ésta es la versión <strong>4.0.3</strong>.</p>
+<p>Para instalarlo, es necesario entrar a <a href="https://cran.r-project.org/"><em>The Comprehensive R Archive Network</em></a> y seguir las instrucciones para cada sistema operativo.</p>
+<div id="mac-osx" class="section level3">
+<h3>MAC OSX</h3>
+<ul>
+<li>Basta con descargar el archivo <code>.pkg</code> <a href="https://cran.r-project.org/bin/macosx/R-4.0.3.pkg">de este link</a>, descomprimir el archivo, abrir el archivo y seguir las instrucciones.</li>
+</ul>
+</div>
+<div id="windows" class="section level3">
+<h3>Windows</h3>
+<ul>
+<li>Basta con descargar el archivo <code>.exe</code> <a href="https://cran.r-project.org/bin/windows/base/R-4.0.3-win.exe">de este link</a>, abrir el archivo y seguir las instrucciones.</li>
+</ul>
+</div>
+<div id="linux" class="section level3">
+<h3>Linux</h3>
+<p>En Terminal, escribir las siguientes dos líneas:</p>
+<p><code>sudo apt-get update</code></p>
+<p><code>sudo apt install r-base r-base-core r-recommended r-base-de</code></p>
+<div style="margin-bottom:25px;">
+
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="cómo-instalar-rstudio" class="section level2">
+<h2>¿Cómo instalar RStudio?</h2>
+<p>Para instalar RStudio (plataforma que usaremos para el uso de <code>R</code>), es necesario acudir a <a href="https://www.rstudio.com/products/rstudio/download/">esta página</a> y seleccionar nuestro sistema operativo en el menú <em>Installers for Supported Platforms</em>. En el caso de Windows, <a href="https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe">este</a> es el archivo, y en el caso de MAC OSX el archivo es <a href="https://download1.rstudio.org/desktop/macos/RStudio-1.3.1093.dmg">éste</a>.</p>
+<p>Para Ubuntu, hay que correr estas líneas en Terminal:</p>
+<p><code>sudo apt-get install gdebi-core</code></p>
+<p><code>wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.1093-amd64.deb</code></p>
+<p><code>sudo gdebi rstudio-server-1.3.1093-amd64.deb</code></p>
+<div style="margin-bottom:25px;">
+
+</div>
+<p><br></p>
+</div>
+<div id="cómo-instalo-latex" class="section level2">
+<h2>¿Cómo instalo LaTeX?</h2>
+<p>Es importante tener LaTeX para crear documentos en PDF. Para instalarlo, hay que entrar a <a href="https://www.latex-project.org/get/">este sitio</a> y seleccionar nuestro sistema operativo.</p>
+<p><br></p>
+</div>
+<div id="textos-libros-y-materiales" class="section level2">
+<h2>Textos, libros y materiales</h2>
+<div id="para-aprender-r" class="section level3">
+<h3>Para aprender R</h3>
+<p>Hay, realmente, miles de materiales excelentes para aprender <code>R</code>. En mi experiencia éstos han sido los más útiles.</p>
+<ul>
+<li><p><a href="https://r4ds.had.co.nz/"><strong>Wickham y Grolemund</strong> - R for Data Science</a>: Este el libro sagrado de los que usamos <code>R</code> a través del <code>tidyverse</code>. Es el mejor y más completo libro para aprender a usar en lenguaje. Les recomiendo mucho terminarlo.</p></li>
+<li><p><a href="http://shop.oreilly.com/product/0636920028352.do">Cotton - Learning R A Step-by-Step Function Guide to Data Analysis</a></p></li>
+<li><p><a href="https://ndphillips.github.io/piratesguide.html">Phillips - YaRrr! The Pirate’s Guide to R</a>: Una guía introductoria (y bastante divertida) de aprender <code>R</code>. Altamente recomendable también para aprender métodos bayesianos. Yo aprendí <code>R</code> con este manual. Phillips también tiene gran material introductorio <a href="https://www.youtube.com/watch?v=Vkv7-nw3wwU&amp;list=PL9tt3I41HFS9gmeZFEuNrnu_7V_NFngfJ">en su canal de YouTube</a></p></li>
+<li><p><a href="https://whattheyforgot.org/">What They Forgot to Teach You About R - Bryan &amp; Hester</a></p></li>
+<li><p><a href="https://www.burns-stat.com/pages/Tutor/R_inferno.pdf">Burns - R’s Inferno</a>: La premisa del autor es simple “si estás usando R y piensas que es un infierno, este libro es para ti”.</p></li>
+<li><p><a href="https://privefl.github.io/advr38book/index.html">Privé - Advanced R Course</a>:Un buen libro avanzado sobre el tema.</p></li>
+</ul>
+</div>
+<div id="para-resolver-y-buscar-dudas" class="section level3">
+<h3>Para resolver (y buscar dudas)</h3>
+<ul>
+<li><p><a href="https://stackoverflow.com/">Stack Overflow</a>: No hay de otra, <strong>es crucial preguntar</strong>.</p></li>
+<li><p><a href="http://www.sthda.com/english/">Statistical tools for high-throughput data analysis</a></p></li>
+<li><p><a href="https://uc-r.github.io/">UC Business Analytics R Programming Guide</a></p></li>
+<li><p><a href="http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html">Prabhakaran - Top 50 ggplot2 Visualizations - The Master List (With Full R Code)</a></p></li>
+<li><p><a href="http://segasi.com.mx/cursos/recursos_r/recursos/index.html">Sebastián Garrido - Recursos para R</a>: “Segasi” ha recolectado un montón de recursos introductorios (y no tanto) en su página personal.</p></li>
+</ul>
+<div style="margin-bottom:25px;">
+
+</div>
+<p><br></p>
+<div id="rmarkdown-y-otras-herramientas" class="section level4">
+<h4>RMarkdown y otras herramientas</h4>
+<p>En este curso se pretende que podamos presentar resultados en reportes profesionales y muy elegantes que puean ser leídos (y usados) por cualquiera. Así, usaremos <em>Markdown</em> “con sabor” a <code>R</code> para generar código y resultados.</p>
+<ul>
+<li><p><a href="https://bookdown.org/yihui/rmarkdown/">Xie, Allaire &amp; Grolemund - R Markdown: The Definitive Guide</a>: La Guía definitiva para usar <em>Markdown</em> “con sabor” a R.</p></li>
+<li><p><a href="https://www.latex-tutorial.com/tutorials/">A simple guide to LaTeX - Step by Step</a>: Si bien no usaremos <em>LaTeX</em> directamente, sí es importante tenerlo instalado y conocer su existencia y su sintaxis básica para usarla en <em>RMarkdown</em>.</p></li>
+</ul>
+</div>
+</div>
+<div id="para-estadística-en-r" class="section level3">
+<h3>Para estadística en R</h3>
+<p>Este curso está construido en mayor o menor medida con base en siguientes materiales:</p>
+<ul>
+<li><p><a href="https://moderndive.netlify.com/index.html">Ismay &amp; Kim - Statistical Inference via Data Science: A ModernDive into R and the Tidyverse</a>.</p></li>
+<li><p><a href="https://learningstatisticswithr.com/book/">Navarro - Learning statistics with R: A tutorial for psychology students and other beginners.</a>. El código del libro disponible <a href="https://learningstatisticswithr.com/">aquí</a>.</p></li>
+<li><p><a href="https://www.econometrics-with-r.org/1-introduction.html">Hanck et al. - Introduction to Econometrics with R</a></p></li>
+<li><p><a href="https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067">Field et a. - Discovering Statistics Using R</a>. Este libro es bastante didactivo, pero un poco infantil para lectorxs más maduros.</p></li>
+<li><p><a href="https://www.springer.com/la/book/9780387096070">Sheather - A Modern Approach to Regression with R</a>. El código se encuentra <a href="https://www.stat.tamu.edu/~sheather/book/">aquí</a>.</p></li>
+<li><p><a href="https://www-bcf.usc.edu/~gareth/ISL/">James, et al. - An Introduction to Statistical Learning with Applications in R</a>. El PDF y el código se encuentran en el link.</p></li>
+<li><p><a href="http://shop.oreilly.com/product/0636920048992.do">Bruce &amp; Bruce - Practical Statistics for Data Scientists 50 Essential Concepts</a>: El código de este libro se encuentra en <a href="https://github.com/andrewgbruce/statistics-for-data-scientists/tree/master/src">este repositorio</a>.</p></li>
+<li><p><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">Hastie, et al. - The Elements of Statistical Learning</a>. El PDF y el código se encuentran en el link.</p></li>
+<li><p><a href="http://shop.oreilly.com/product/9780596809164.do">Teetor - R Cookbook Proven Recipes for Data Analysis, Statistics, and Graphics</a></p></li>
+<li><p><a href="https://crd150.github.io/index.html">Noli Brazil - Quantitative Methods in Community Research</a></p></li>
+<li><p><a href="https://mgimond.github.io/Spatial/index.html">Manuel Gimond - Intro to GIS and Spatial Analysis</a></p></li>
+<li><p><a href="https://cengel.github.io/R-spatial/">Claudia Engel - Using Spatial Data in R</a></p></li>
+<li><p><a href="https://rpubs.com/corey_sparks">Corey Sparks</a></p></li>
+</ul>
+</div>
+</div>
+<div id="repositorios-de-bases-de-datos" class="section level2">
+<h2>Repositorios de bases de datos</h2>
+<p>Algunos repositorios recomendados para buscar buenas bases de datos.</p>
+<ul>
+<li><a href="https://github.com/awesomedata/awesome-public-datasets">Awesome Public Datasets</a></li>
+<li><a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday Datasets</a></li>
+<li><a href="https://github.com/rudeboybert/fivethirtyeight">FiveThirtyEight</a></li>
+<li><a href="https://www.kaggle.com/datasets">Las bases de datos del programa de competencias <em>Kaggle</em></a></li>
+<li><a href="https://dataverse.harvard.edu/">Harvard Dataverse</a></li>
+<li><a href="https://datos.gob.mx/">Datos abiertos del Gobierno Federal</a></li>
+<li><a href="https://datos.cdmx.gob.mx/">Datos abiertos de la Ciudad de México</a></li>
+<li><a href="https://datos.jalisco.gob.mx/">Datos abiertos del Estado de Jalisco</a></li>
+<li><a href="http://datos.cide.edu/">Banco de Información del LNPP del CIDE</a></li>
+<li><a href="https://datasetsearch.research.google.com/">Google Dataset Search</a></li>
+<li><a href="https://www.openicpsr.org/openicpsr/">Open ICPSR</a></li>
+<li><a href="http://reshare.ukdataservice.ac.uk/">UK Data Service</a></li>
+<li><a href="https://esoc.princeton.edu/">Empirical Studies of Conflict</a></li>
+</ul>
+<p><br></p>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+
+</body>
+</html>

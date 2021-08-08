@@ -1,0 +1,22 @@
+"0","texto <- lapply(urls$value, function(i){
+  
+  read_html(i) %>% 
+    html_nodes("".entry-content"") %>% 
+    html_text() %>% 
+    gsub(""\\t|\\n"","""") %>% 
+    as_tibble()
+  
+})
+"
+"2","Error in gsub(., ""\\t|\\n"", """") : invalid regular expression '
+
+				    2021: AÃ±o de la Independencia
+Â 
+PRESIDENTE ANDRÃ‰S MANUEL LÃ“PEZ OBRADOR:Â Amigas, amigos de Uayma:
+Me da mucho gusto estar de nuevo en YucatÃ¡n para supervisar las obras del Tren Maya en este tramo de YucatÃ¡n y de Quintana Roo.
+Nos acaban de informar que se va avanzando. Son alrededor de 250 kilÃ³metros y esta obra estÃ¡ a cargo de ICA, que es una empresa seria, responsable, que ademÃ¡s ahora estÃ¡ bien dirigida por Guadalupe Phillips, una mujer trabajadora, recta, Ã­ntegra, un ejemplo de lo que deben ser los responsables de las empresas constructoras de nuestro paÃ­s.
+Por eso tenemos confianza de que, como lo mencionÃ³ Guadalupe, se va a cumplir en tiempo, se va a hacer bien la obra, es decir, con calidad y de acuerdo al presupuesto estimado.
+
+
+Vamos a estar visitando la obra, supervisando el avance de la obra, voy a regresar en tres meses para seguir evaluando el avance de la obra. No podemos fallar porque no hay tiempo. Yo, si asÃ­
+"

@@ -1,0 +1,90 @@
+---
+title: "Sesión 1"
+subtitle: <h4 style="font-style:normal">Visualizaciones avanzadas en R</h4>
+date: <h4 style="font-style:normal">27 de febrero de 2021</h4>
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    theme: cosmo
+---
+
+
+<style>
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+
+.figure {
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+h1.title {
+  font-weight: bold;
+  font-family: Arial;  
+}
+
+h2.title {
+  font-family: Arial;  
+}
+
+</style>
+
+
+<style type="text/css">
+#TOC {
+  font-size: 13px;
+  font-family: Arial;
+}
+</style>
+
+\
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## 1. Bibliotecas
+
+```{r}
+pacman::p_load(
+  tidyverse, # Tidyverse y sus funciones
+  gapminder, # Acceso a la base de datos de gapminder
+  plotly, # Gráficas interactivas en javascript
+  leaflet, # Mapas interactivos
+  cowplot, # Ordenar, etiquetar
+  ggthemes, # Temas cosméticos
+  hrbrthemes, # Opción de temas elegantes
+  gganimate, # Gráficas animadas
+  ggforce, # Muchas geometrías y etiquetas
+  ggridges, # Creación de ridges
+  ggrepel, # Etiquetas que se repelan
+  ggpol, # graficas de arco
+  waffle, # Gráficas de wafles
+  spotifyr # Spotifyr
+)
+```
+
+
+Forma adicional de instalar spotifyR
+ 
+
+
+
+
+
+
+
+
+
+
+

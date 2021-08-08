@@ -1,0 +1,62 @@
+"0","prt <- read_csv(""partidos_mexico.csv"","
+"0","                locale = locale(encoding=""LATIN1"")) %>% "
+"0","  mutate(text = str_squish(text))"
+"2","Missing column names filled in: 'X1' [1]"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  manifesto_id = [31mcol_character()[39m,
+  party = [32mcol_double()[39m,
+  date = [32mcol_double()[39m,
+  language = [31mcol_character()[39m,
+  source = [31mcol_character()[39m,
+  has_eu_code = [33mcol_logical()[39m,
+  is_primary_doc = [33mcol_logical()[39m,
+  may_contradict_core_dataset = [33mcol_logical()[39m,
+  md5sum_text = [31mcol_character()[39m,
+  url_original = [31mcol_character()[39m,
+  md5sum_original = [31mcol_character()[39m,
+  annotations = [33mcol_logical()[39m,
+  handbook = [32mcol_double()[39m,
+  is_copy_of = [33mcol_logical()[39m,
+  title = [31mcol_character()[39m,
+  id = [31mcol_character()[39m,
+  text = [31mcol_character()[39m
+)
+"
+"0","prt_name <- read_csv(""party_names.csv"","
+"0","                locale = locale(encoding=""LATIN1""))"
+"2","Parsed with column specification:
+cols(
+  party = [32mcol_double()[39m,
+  party_name = [31mcol_character()[39m
+)
+"
+"0","prt %>% "
+"0","  left_join(prt_name) %>% "
+"0","  write.csv(""corpus_partidos.csv"")"
+"2","Joining, by = ""party""
+"
+"0","prt <- read_csv(""corpus_partidos.csv"","
+"0","                locale = locale(encoding=""LATIN1"")) %>% "
+"0","  mutate(text = str_squish(text))"
+"2","Missing column names filled in: 'X1' [1]"
+"2","Duplicated column names deduplicated: 'X1' => 'X1_1' [2]"
+"2","Parsed with column specification:
+cols(
+  .default = col_character(),
+  X1 = [32mcol_double()[39m,
+  X1_1 = [32mcol_double()[39m,
+  party = [32mcol_double()[39m,
+  date = [32mcol_double()[39m,
+  has_eu_code = [33mcol_logical()[39m,
+  is_primary_doc = [33mcol_logical()[39m,
+  may_contradict_core_dataset = [33mcol_logical()[39m,
+  annotations = [33mcol_logical()[39m,
+  handbook = [32mcol_double()[39m,
+  is_copy_of = [33mcol_logical()[39m
+)
+"
+"2","See spec(...) for full column specifications.
+"
+"0","mx_2010  <- corpus(prt, text_field = ""text"")"

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Manuel Toral" />
+  <meta name="date" content="2020-12-11" />
+  <title>Introducción al uso de R</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+              </style>
+  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+  <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
+  <script src="site_libs/slidy-2/scripts/slidy.js"></script>
+  <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Introducción al uso de R</h1>
+  <p class="author">
+Manuel Toral
+  </p>
+  <p class="date">12/11/2020</p>
+</div>
+<div id="hola-mundo" class="slide section level2">
+<h1>¡Hola mundo!</h1>
+<p>Esta es la primera sesión del curso introductorio de <code>R</code> para el personal del IMCO. Muchas gracias por inscribirse y ojalá sea de utilidad.</p>
+<p><strong>Primero lo primero</strong>: ¿Ya tienes <code>R</code> y <em>R Studio</em> instalado en tu computadora? Si has tenido problemas, prueba con las instrucciones gráficas de este sitio: <a href="https://r-coder.com/instalar-r/">https://r-coder.com/instalar-r/</a>.</p>
+</div>
+<div id="qué-es-r" class="slide section level2">
+<h1>¿Qué es R?</h1>
+<p>R es un entorno y lenguaje de programación con un enfoque al análisis estadístico desarrollado inicialmente por <em>R</em>obert Gentleman y <em>R</em>oss Ihaka del Departamento de Estadística de la Universidad de Auckland en 1993.</p>
+<p>R es un lenguaje libre en un entorno colaborativo y abierto.</p>
+</div>
+<div id="la-estructura" class="slide section level2">
+<h1>La estructura</h1>
+<p>Serán 4 días intensivos de 4 horas (<em>fiuf</em>!).</p>
+<p>Para hacernos un poco más ligero estas sesiones, propongo la siguiente estructura de tiempo.</p>
+<ul>
+<li><p>1:30 horas de exposición (9 a 10:30 am)</p></li>
+<li><p>20 minutos de descanso</p></li>
+<li><p>1:30 horas de exposición (11:00 am a 2 pm)</p></li>
+</ul>
+</div>
+<div id="los-objetivos" class="slide section level2">
+<h1>Los objetivos</h1>
+<p>Mis objetivos en este son los 3, en ese orden:</p>
+<ol style="list-style-type: decimal">
+<li><p>Que la persona pueda producir un <em>producto</em> basado en un análisis de datos.</p>
+<ul>
+<li>Este producto debe ser resultado de un <em>flujo de trabajo</em> exitoso basado en la importación, tratamiento, análisis y comunicación de hallazgos.</li>
+</ul></li>
+<li><p>Que la persona logre encontrar la información necesaria para resolver sus <em>necesidades</em> de análisis de datos.</p></li>
+<li><p>Que la persona entienda la sintaxis general del lenguaje <code>R</code> y del <code>tidyverse</code> como sintaxis complementaria.</p></li>
+</ol>
+</div>
+<div id="la-habilidad-más-importante-preguntar" class="slide section level2">
+<h1>La habilidad más importante: preguntar</h1>
+<p>Dónde y cómo preguntar es quizás la habilidad más importante de este curso. Hay miles de sitios en internet que pueden ofrecernos una solución, aunque usualmente podremos encontrar la mayor parte de nuestras preguntas se encontrará en alguno de los sitios más importantes.</p>
+<p>Algunas de las fuentes más confiables para encontrar respuestas:</p>
+<ul>
+<li>Stack Overflow <a href="https://stackoverflow.com/">https://stackoverflow.com/</a></li>
+<li>Statistical tools for high-throughput data analysis <a href="http://www.sthda.com/english/">http://www.sthda.com/english/</a></li>
+<li>R bloggers <a href="https://www.r-bloggers.com/tag/rblogs/">https://www.r-bloggers.com/tag/rblogs/</a></li>
+</ul>
+</div>
+<div id="la-habilidad-más-importante-preguntar-1" class="slide section level2">
+<h1>La habilidad más importante: preguntar</h1>
+<p>Seguro te preguntaras: ¿por qué preguntar es la habilidad más importante?</p>
+<p>La respuesta más sencilla es porque ya alguien más preguntó lo que me estoy preguntando.</p>
+<ul>
+<li><em>¿Cómo sumo dos columnas en <code>R</code>?</em> <a href="https://stackoverflow.com/questions/26046776/sum-two-columns-in-r">https://stackoverflow.com/questions/26046776/sum-two-columns-in-r</a></li>
+<li><em>¿Cómo hago una suma por grupos en <code>R</code></em> <a href="https://stackoverflow.com/questions/1660124/how-to-sum-a-variable-by-group">https://stackoverflow.com/questions/1660124/how-to-sum-a-variable-by-group</a></li>
+<li><em>¿Cómo implemento una red neuronal en <code>R</code>?</em> <a href="https://stackoverflow.com/questions/48081506/r-neural-networks">https://stackoverflow.com/questions/48081506/r-neural-networks</a></li>
+</ul>
+</div>
+<div id="la-segunda-habilidad-más-importante-aceptar-la-frustración" class="slide section level2">
+<h1>La segunda habilidad más importante: aceptar la frustración</h1>
+<p>En estos tres ejemplos no está directamente la respuesta, sino la forma de <em>solucionar un error</em>. Y es que, para quien empieza, este es el primer aprendizaje: <strong>nos vamos a equivocar, todo el tiempo y de las maneras más frustrantes posibles</strong>.</p>
+<p>Pero eso está bien y hay muchos materiales para apoyarnos: <em>The <code>R</code> inferno (Burns, 2011)</em> <a href="https://www.burns-stat.com/pages/Tutor/R_inferno.pdf">https://www.burns-stat.com/pages/Tutor/R_inferno.pdf</a>.</p>
+</div>
+<div id="algunas-motivaciones-de-este-curso" class="slide section level2">
+<h1>Algunas motivaciones de este curso</h1>
+<p>Alguna motivaciones que nos guiarán en este curso.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>La flojera:</strong> Sí, hay motivaciones más importantes. Pero ser una persona floja es la decisión más difícil y puede llevar más tiempo que hacer un trabajo repetitivo y aburrido. <em>Las computadoras, al final, sirven para repetir</em>.</p></li>
+<li><p><strong>Mi <em>yo</em> del futuro:</strong> La persona en la que siempre debemos pensar es en nuestro <em>yo</em> del futuro. Esa persona nos debe poder agradecer por el orden y el cuidado de nuestro trabajo.</p></li>
+<li><p><strong>La transparencia:</strong> ¿Cómo comunicamos nuestro flujo de trabajo en <em>MS Excel</em>?</p></li>
+<li><p><strong>La replicabilidad:</strong> ¿Cómo replico los pasos que siguió mi colega en <em>SPSS</em>?</p></li>
+<li><p><strong>La refutabilidad:</strong> ¿Cómo critico la metodología de un artículo si no puedo (o no quiero) pagar <em>STATA</em>?</p></li>
+</ol>
+</div>
+<div id="la-comunidad" class="slide section level2">
+<h1>La comunidad</h1>
+<p>Podemos invertir mucho tiempo discutiendo las ventajas y desventajas en el uso de <code>R</code>, pero una de las grandes cosas que tiene aprender este lenguaje es la comunidad.</p>
+<ul>
+<li><p><em>Tidytuesday</em>: Todos los martes, la <code>R4DS Online Learning Community</code> lanza un reto semanal a todas las personas usuarias de <code>R</code>. Se trata de una base de datos semanal con la que la gente hace visualizaciones y las publica en twitter bajo el hashtag #tidytuesday. <a href="https://github.com/rfordatascience/tidytuesday">https://github.com/rfordatascience/tidytuesday</a></p></li>
+<li><p><em>Datos de miércoles</em>: En habla hispana, el <em>tidytuesday</em> tiene un simil llamado #DatosdeMiércoles. <a href="https://github.com/rfordatascience/tidytuesday">https://github.com/rfordatascience/tidytuesday</a></p></li>
+<li><p><em>R Ladies</em>: La comunidad de mujeres usuarias de <code>R</code> es una de las más importantes. Cada país tiene uno o varios grupos de mujeres que buscan promover el uso de la ciencia de datos a más mujeres.</p></li>
+</ul>
+</div>
+<div id="r-en-estado-salvaje-vs.-su-ide" class="slide section level2">
+<h1>R en estado salvaje vs. su IDE</h1>
+<div class="figure">
+<img src="img_p1/fig1.png" style="width:80.0%;height:80.0%" alt="" />
+<p class="caption">R en estado salvaje</p>
+</div>
+</div>
+<div id="r-en-estado-salvaje" class="slide section level2">
+<h1>R en estado salvaje</h1>
+<ul>
+<li><p>Consola para ejecutar código</p></li>
+<li><p>Guarda en la memoria de nuestra computadora todos los procesos</p></li>
+<li><p>Tiene sólo las herramientas escenciales para ejecutar el código.</p></li>
+</ul>
+<p>Pero en el mundo de hoy, se necesitan más herramientas para mantener el control de nuestro trabajo, por eso la necesidad de un Entorno de Desarrollo Integrado o <em>Integrated Development Environment</em> (IDE).</p>
+</div>
+<div id="r-dentro-de-su-ide-rstudio" class="slide section level2">
+<h1>R dentro de su IDE: RStudio</h1>
+<div class="figure">
+<img src="img_p1/fig2.png" alt="" />
+<p class="caption">Las ventanas de RStudio</p>
+</div>
+</div>
+<div id="corolario" class="slide section level2">
+<h1>Corolario</h1>
+<p>Si quedaron dudas sobre la interfaz del IDE, acá un excelente material:</p>
+<ul>
+<li>Boccardo <a href="https://bookdown.org/gboccardo/manual-ED-UCH/uso-basico-de-rstudio.html#que-es-rstudio-una-interfaz-para-usar-r">https://bookdown.org/gboccardo/manual-ED-UCH/uso-basico-de-rstudio.html#que-es-rstudio-una-interfaz-para-usar-r</a></li>
+</ul>
+</div>
+<div id="manos-a-la-obra" class="slide section level2">
+<h1>Manos a la obra</h1>
+<p>¡Buenas prácticas!</p>
+<ol style="list-style-type: decimal">
+<li><p>Crear un proyecto que concentre todos los archivos.</p></li>
+<li><p>Tener una obsesiva necesidad de ordenar nuestros archivos.</p>
+<ul>
+<li>Por ejemplo, hacer carpeta de <em>insumos</em> y <em>resultados</em>.</li>
+</ul></li>
+</ol>
+</div>
+<div id="crear-proyectos-paso-1" class="slide section level2">
+<h1>Crear proyectos: Paso 1</h1>
+<div class="figure">
+<img src="img_p1/fig3.png" style="width:60.0%;height:60.0%" alt="" />
+<p class="caption">Crear un nuevo proyecto paso 1</p>
+</div>
+</div>
+<div id="crear-proyectos-paso-2" class="slide section level2">
+<h1>Crear proyectos: Paso 2</h1>
+<div class="figure">
+<img src="img_p1/fig4.png" style="width:60.0%;height:60.0%" alt="" />
+<p class="caption">Crear un nuevo proyecto paso 1</p>
+</div>
+</div>
+<div id="basta-de-palabras" class="slide section level2">
+<h1>Basta de palabras</h1>
+<p>Creemos un script y comencemos a interactuar.</p>
+</div>
+<div id="sintaxis" class="title-slide slide section level1">
+<h1>Sintaxis</h1>
+
+</div>
+<div id="estructura-general-de-la-sintaxis" class="slide section level2">
+<h1>Estructura general de la sintaxis</h1>
+<div class="figure">
+<img src="img_p1/fig5.png" alt="" />
+<p class="caption">Estructura general</p>
+</div>
+<div class="figure">
+<img src="img_p1/fig6.png" alt="" />
+<p class="caption">En lenguaje humano</p>
+</div>
+</div>
+<div id="instalar-bibliotecas-con-la-consola" class="slide section level2">
+<h1>Instalar bibliotecas con la consola</h1>
+<p>Sólo se necesita una vez.</p>
+</div>
+<div id="instalar-bibliotecas-con-el-menú" class="slide section level2">
+<h1>Instalar bibliotecas con el menú</h1>
+<div class="figure">
+<img src="img_p1/fig7.png" alt="" />
+<p class="caption">Pestaña “Packages”</p>
+</div>
+</div>
+<div id="las-sintaxis-de-r" class="slide section level2">
+<h1>Las sintaxis de R</h1>
+<div class="figure">
+<img src="img_p1/cheatsheet.png" style="width:85.0%;height:85.0%" alt="" />
+<p class="caption">Traducción del acordeón de <span class="citation">@AmeliaMN</span> traducido por <span class="citation">@rivaquiroga</span></p>
+</div>
+</div>
+
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+</body>
+</html>

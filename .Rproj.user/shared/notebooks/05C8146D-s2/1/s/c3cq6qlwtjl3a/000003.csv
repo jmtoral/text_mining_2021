@@ -1,0 +1,4 @@
+"0","discursos <- tibble("
+"0","  titulo = unlist(titulos),"
+"0","  texto = unlist(texto)"
+"0","  )"

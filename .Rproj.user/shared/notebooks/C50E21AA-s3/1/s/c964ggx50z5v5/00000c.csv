@@ -1,0 +1,17 @@
+"0","tmls <- get_timelines(c(""Pat_MercadoC"","
+"0","                        ""MaluMicher"","
+"0","                        ""fernandeznorona"","
+"0","                        ""RicardoAnayaC"","
+"0","                        ""jmtoralc"","
+"0","                        ""mario_delgado""), n = 200,"
+"0","                      include_rts = FALSE)"
+"2","Requesting token on behalf of user...
+"
+"2","Waiting for authentication in browser...
+"
+"2","Press Esc/Ctrl + C to abort
+"
+"2","Authentication complete.
+"
+"0","x <- tmls %>% "
+"0","  select(screen_name, text)"
