@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -437,7 +437,7 @@ h2.title {
 </style>
 <p><br />
 </p>
-<p>¡Hola! Bienvenida al curso intermedio de R para el personal del IMCO. En esta página encontrarás:</p>
+<p>¡Hola! Bienvenida al curso de análisis cuantitativo de texto del verano de 2021:</p>
 <ul>
 <li>Un syllabus con las sesiones y temas que veremos</li>
 <li>El código que usaremos en las sesiones</li>
@@ -445,32 +445,33 @@ h2.title {
 </ul>
 <div id="acerca-del-curso" class="section level2">
 <h2>Acerca del curso</h2>
-<p>Aquí iría una breve explicación del curso :) <strong>R</strong></p>
+<p>La idea de este curso es que las personas que los tomen puedan enfrentarse a los problemas más comunes de procesamiento, análisis y visualización de datos provenientes del lenguaje natural.</p>
+<p>Es por eso que se utilizará el lenguaje humano como insumo para poder entender ciertos patrones del lenguaje. Algunas preguntas que podemos hacernos con este paradigma son las siguientes:</p>
 <p><br></p>
-<p>Abajo encontrarán los materiales que se presentaron en la primera parte de este curso. Adicionales, me gustaría incluir los siguientes:</p>
+<p>Los principales materiales que usaremos son los siguientes:</p>
 <ul>
 <li><p><a href="https://www.tidytextmining.com/">Silge &amp; Robinson - Text Mining with R</a></p></li>
 <li><p><a href="https://quanteda.io/index.html">Benoit - quanteda: An R package for the quantitative analysis of textual data</a></p></li>
-<li><p><a href="https://plotly.com/r/">rOpenSci - Plotly: The front end for ML and data science models</a></p></li>
-<li><p><a href="https://rstudio.github.io/leaflet/">The “leaflet” R package</a></p></li>
-<li><p><a href="https://exts.ggplot2.tidyverse.org/gallery/">ggplot2 extensions gallery</a></p></li>
+<li><p><a href="https://ufal.mff.cuni.cz/people">Instituto de Lingüistica Formal y Aplicada de la Charles University de Chequia</a></p></li>
+<li><p><a href="https://smltar.com/">Hvitfeldt y Silge - Supervised Machine Learning for Text Analysis in R</a></p></li>
+<li><p><a href="https://m-clark.github.io/text-analysis-with-R/intro.html">Clark - Text Analysis in R</a></p></li>
 </ul>
 <p><br> <br> <br> <br></p>
 </div>
 <div id="cómo-instalo-y-uso-r" class="section level2">
 <h2>¿ Cómo instalo (y uso) <code>R</code>?</h2>
-<p>Para este curso vamos a trabajar, desde el principio, con código en <code>R</code>. Es necesario tener <strong>la última versión</strong> de este lenguaje, al momento de escribir este repositorio ésta es la versión <strong>4.0.3</strong>.</p>
+<p>Para este curso vamos a trabajar, desde el principio, con código en <code>R</code>. Es necesario tener <strong>la última versión</strong> de este lenguaje, al momento de escribir este repositorio ésta es la versión <strong>4.1.1</strong>.</p>
 <p>Para instalarlo, es necesario entrar a <a href="https://cran.r-project.org/"><em>The Comprehensive R Archive Network</em></a> y seguir las instrucciones para cada sistema operativo.</p>
 <div id="mac-osx" class="section level3">
 <h3>MAC OSX</h3>
 <ul>
-<li>Basta con descargar el archivo <code>.pkg</code> <a href="https://cran.r-project.org/bin/macosx/R-4.0.3.pkg">de este link</a>, descomprimir el archivo, abrir el archivo y seguir las instrucciones.</li>
+<li>Basta con descargar el archivo <code>.pkg</code> <a href="https://cran.r-project.org/bin/macosx/R-4.1.1.pkg">de este link</a>, descomprimir el archivo, abrir el archivo y seguir las instrucciones.</li>
 </ul>
 </div>
 <div id="windows" class="section level3">
 <h3>Windows</h3>
 <ul>
-<li>Basta con descargar el archivo <code>.exe</code> <a href="https://cran.r-project.org/bin/windows/base/R-4.0.3-win.exe">de este link</a>, abrir el archivo y seguir las instrucciones.</li>
+<li>Basta con descargar el archivo <code>.exe</code> <a href="https://cran.r-project.org/bin/windows/base/R-4.1.1-win.exe">de este link</a>, abrir el archivo y seguir las instrucciones.</li>
 </ul>
 </div>
 <div id="linux" class="section level3">
@@ -486,7 +487,7 @@ h2.title {
 </div>
 <div id="cómo-instalar-rstudio" class="section level2">
 <h2>¿Cómo instalar RStudio?</h2>
-<p>Para instalar RStudio (plataforma que usaremos para el uso de <code>R</code>), es necesario acudir a <a href="https://www.rstudio.com/products/rstudio/download/">esta página</a> y seleccionar nuestro sistema operativo en el menú <em>Installers for Supported Platforms</em>. En el caso de Windows, <a href="https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe">este</a> es el archivo, y en el caso de MAC OSX el archivo es <a href="https://download1.rstudio.org/desktop/macos/RStudio-1.3.1093.dmg">éste</a>.</p>
+<p>Para instalar RStudio (plataforma que usaremos para el uso de <code>R</code>), es necesario acudir a <a href="https://www.rstudio.com/products/rstudio/download/">esta página</a> y seleccionar nuestro sistema operativo en el menú <em>Installers for Supported Platforms</em>.</p>
 <p>Para Ubuntu, hay que correr estas líneas en Terminal:</p>
 <p><code>sudo apt-get install gdebi-core</code></p>
 <p><code>wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.1093-amd64.deb</code></p>

@@ -8,7 +8,7 @@ output:
     toc: true
     toc_depth: 3
     toc_float: true
-    theme: cosmo
+    theme: readable
 ---
 
 
@@ -54,7 +54,7 @@ h2.title {
 
 
 
-¡Hola! Bienvenida al curso intermedio de R para el personal del IMCO. En esta página encontrarás:
+¡Hola! Bienvenida al curso de análisis cuantitativo de texto del verano de 2021:
 
 * Un syllabus con las sesiones y temas que veremos
 * El código que usaremos en las sesiones
@@ -63,26 +63,26 @@ h2.title {
 
 ## Acerca del curso
 
-Aquí iría una breve explicación del curso :)
- **R** 
- 
+La idea de este curso es que las personas que los tomen puedan enfrentarse a los problemas más comunes de procesamiento, análisis y visualización de datos provenientes del lenguaje natural.
+
+Es por eso que se utilizará el lenguaje humano como insumo para poder entender ciertos patrones del lenguaje. Algunas preguntas que podemos hacernos con este paradigma son las siguientes:
 
 
 
 <br>
 
-Abajo encontrarán los materiales que se presentaron en la primera parte de este curso. Adicionales, me gustaría incluir los siguientes:
+Los principales materiales que usaremos son los  siguientes:
+
 
 - [Silge & Robinson - Text Mining with R](https://www.tidytextmining.com/)
 
 - [Benoit - quanteda: An R package for the quantitative analysis of textual data](https://quanteda.io/index.html)
 
-- [rOpenSci - Plotly: The front end for ML and data science models](https://plotly.com/r/)
+- [Instituto de Lingüistica Formal y Aplicada de la Charles University de Chequia](https://ufal.mff.cuni.cz/people)
 
+- [Hvitfeldt y Silge - Supervised Machine Learning for Text Analysis in R](https://smltar.com/)
 
-- [The "leaflet" R package](https://rstudio.github.io/leaflet/)
-
-- [ggplot2 extensions gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+- [Clark - Text Analysis in R](https://m-clark.github.io/text-analysis-with-R/intro.html)
 
 <br>
 <br>
@@ -92,17 +92,17 @@ Abajo encontrarán los materiales que se presentaron en la primera parte de este
 
 ## ¿ Cómo instalo (y uso) `R`?
 
-Para este curso vamos a trabajar, desde el principio, con código en `R`. Es necesario tener **la última versión** de este lenguaje, al momento de escribir este repositorio ésta es la versión **4.0.3**.
+Para este curso vamos a trabajar, desde el principio, con código en `R`. Es necesario tener **la última versión** de este lenguaje, al momento de escribir este repositorio ésta es la versión **4.1.1**.
 
 Para instalarlo, es necesario entrar a [*The Comprehensive R Archive Network*](https://cran.r-project.org/) y seguir las instrucciones para cada sistema operativo.
 
 ### MAC OSX
 
-- Basta con descargar el archivo `.pkg` [de este link](https://cran.r-project.org/bin/macosx/R-4.0.3.pkg), descomprimir el archivo, abrir el archivo y seguir las instrucciones.
+- Basta con descargar el archivo `.pkg` [de este link](https://cran.r-project.org/bin/macosx/R-4.1.1.pkg), descomprimir el archivo, abrir el archivo y seguir las instrucciones.
 
 ### Windows
 
-- Basta con descargar el archivo `.exe` [de este link](https://cran.r-project.org/bin/windows/base/R-4.0.3-win.exe), abrir el archivo y seguir las instrucciones.
+- Basta con descargar el archivo `.exe` [de este link](https://cran.r-project.org/bin/windows/base/R-4.1.1-win.exe), abrir el archivo y seguir las instrucciones.
 
 ### Linux
 
@@ -119,7 +119,7 @@ En Terminal, escribir las siguientes dos líneas:
 
 ## ¿Cómo instalar RStudio?
 
-Para instalar RStudio (plataforma que usaremos para el uso de `R`), es necesario acudir a [esta página](https://www.rstudio.com/products/rstudio/download/) y seleccionar nuestro sistema operativo en el menú *Installers for Supported Platforms*. En el caso de Windows, [este](https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe) es el archivo, y en el caso de MAC OSX el archivo es [éste](https://download1.rstudio.org/desktop/macos/RStudio-1.3.1093.dmg).
+Para instalar RStudio (plataforma que usaremos para el uso de `R`), es necesario acudir a [esta página](https://www.rstudio.com/products/rstudio/download/) y seleccionar nuestro sistema operativo en el menú *Installers for Supported Platforms*. 
 
 Para Ubuntu, hay que correr estas líneas en Terminal:
 

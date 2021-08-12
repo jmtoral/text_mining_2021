@@ -30,7 +30,7 @@ navbar:
       href: about.html
 output:
   html_document:
-    theme: spacelab
+    theme: readable
     highlight: textmate
     mathjax: ~
     toc_depth: 3

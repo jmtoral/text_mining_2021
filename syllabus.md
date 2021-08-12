@@ -49,19 +49,17 @@ h2.title {
 
 ## Sesión 1
 
-### Visualizaciones avanzadas
+### Procesamiento y lectura de textos
 
-- Veremos algunas visualizaciones interactivas y profundizaremos más sobre el trabajo de la gramática de gráficos.
-- Haremos gráficas interactivas.
-- Animaremos algunas animaciones.
+- Ve.-...
 
 <div style="margin-bottom:25px;">
 </div>
 
 
-### Scraping básico y análisis de lenguaje natural
+### Scraping básico
 
-- Con base en las mañaneras del Presidente de la República y de `rvest` vamos a descargar información de la web y analizarla.
+- Con ...
 
 
 <div style="margin-bottom:25px;">
