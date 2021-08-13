@@ -1,13 +1,13 @@
 ---
 title: "Syllabus"
-subtitle: <h4 style="font-style:normal">Curso introductorio al lenguaje R</h4>
-date: <h4 style="font-style:normal">Febrero/Marzo 2021</h4>
+subtitle: <h4 style="font-style:normal">Introducción al análisis cuantitativo de textos en R</h4>
+date: <h4 style="font-style:normal">Agosto 2021</h4>
 output: 
   html_document:
     toc: true
     toc_depth: 3
     toc_float: true
-    theme: cosmo
+    theme: readable
 ---
 
 
@@ -47,34 +47,70 @@ h2.title {
 
 \
 
-## Sesión 1
+## Sesión 1: ¿Cómo proceso cadenas de texto como datos?
+
+### Breve repaso del *tidyverse*
+
+- Repaso breve de las 5 funciones
+- Uso de las funciones para cadenas de texto `str_`
+- Breve introducción a las expresiones regulares
 
 ### Procesamiento y lectura de textos
 
-- Ve.-...
-
-<div style="margin-bottom:25px;">
-</div>
+- ¿Cómo leo datos desde PDF / EPUBs / archivos de texto?
+- Ordenar, estructurar y limpiar cadenas de texto
+- ¿Qué es un *corpus* y para qué sirve?
 
 
 ### Scraping básico
 
-- Con ...
+- ¿Cómo obtengo datos de manera sistemática de algún lugar de internet?
 
+### Introducción a `tidytext`
 
-<div style="margin-bottom:25px;">
-</div>
-
-### Trabajo de encuestas y uso de directorios
-
-<div style="margin-bottom:25px;">
-</div>
+- Como *desanidar tokens* con `unnest_tokens` y contarlos.
 
 
 
-### Una provocación a los modelos de predicción
+## Sesión 2: ¿Cómo analizar las palabras?
 
-<div style="margin-bottom:25px;">
-</div>
+### Introducción al análisis cuantitativo de textos
+
+- Ley de Zipf
+- Conteo de tokens y *n-gramas¨*
+- Relaciones entre palabras
 
 
+### El documento como unidad de análisis
+
+- Cálculo y uso del *tf_idf*
+
+### Introducción al análisis de sentimientos
+
+- Análisis de sentimientos por el método de diccionario
+
+### Similitud entre documentos
+- Distancias euclideanas
+
+
+
+## Sesión 3: Modelos de clasificación
+
+- Preparación para modelar
+    - Remover palabras vacías (*stopwords*)
+    - Extraer las stemas
+    - Etiquetado de elementos del discurso
+    
+- Métodos de categorías conocidas:
+    - Impelementación práctica de la regresión lineal
+    - Implementación práctica Naive Bayes para NLP
+    - Implementación práctica de Lasso para NLP
+
+
+## Sesión 4: Más modelos
+
+- Métodos de clasificación con categorías no conocidas
+    - Distribución latente de Dirichlet
+    - Distribución latente de Dirichlet con semillas
+
+- Vectorización de textos 

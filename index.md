@@ -65,8 +65,22 @@ h2.title {
 
 La idea de este curso es que las personas que los tomen puedan enfrentarse a los problemas más comunes de procesamiento, análisis y visualización de datos provenientes del lenguaje natural.
 
-Es por eso que se utilizará el lenguaje humano como insumo para poder entender ciertos patrones del lenguaje. Algunas preguntas que podemos hacernos con este paradigma son las siguientes:
+Es por eso que se utilizará el lenguaje humano como insumo para poder entender ciertos patrones del lenguaje. Algunas habilidades que se podrán adquirir de este curso son las siguientes:
 
+- Procesar textos de diversas fuentes digitales para usarlos como insumos de análisis.
+- Clasificar de manera sistemática documentos en categorías conocidas o desconocidas.
+- Identificar el sentimiento de ciertas palabras para conocer el tono de ciertos textos
+- Analizar qué tan parecidos son algunos textos
+
+## Fechas 📆, horarios ⏱ y costo 💸 
+
+El curso tiene una duración de 16 horas clase + asesoría para proyectos propios.
+
+- **Sábados 21, 28 agosto y 4 y 11 de septiembre.**
+
+- De **10 am a 2 pm** (4 horas por sesión)
+
+El curso tiene un costo de **3,000** pesos mexicanos en total (se emiten facturas). Se puede pagar por transferencia o por [PayPal](https://www.paypal.com/paypalme/manueltoral).
 
 
 <br>
@@ -78,11 +92,13 @@ Los principales materiales que usaremos son los  siguientes:
 
 - [Benoit - quanteda: An R package for the quantitative analysis of textual data](https://quanteda.io/index.html)
 
-- [Instituto de Lingüistica Formal y Aplicada de la Charles University de Chequia](https://ufal.mff.cuni.cz/people)
+- [BNOSAC - UDPipe Natural Language Processing - Text Annotation](https://bnosac.github.io/udpipe/docs/doc0.html)
 
 - [Hvitfeldt y Silge - Supervised Machine Learning for Text Analysis in R](https://smltar.com/)
 
 - [Clark - Text Analysis in R](https://m-clark.github.io/text-analysis-with-R/intro.html)
+
+- [Cornelius Puschmann - Advancing Text Mining with R and quanteda](https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/advancing-text-mining/)
 
 <br>
 <br>

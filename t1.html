@@ -433,75 +433,10 @@ h2.title {
 </style>
 <p><br />
 </p>
-<p>Las tareas de este curso serán menos guiadas, pero tratarán de estimular de manera más intensa su creatividad para resolver problemas.</p>
-<p>Por ejemplo, esta semana la idea es participar en la dinámica de <em>#tidytuesday</em> y compartir alguna visualización con la comunidad de internet. La base de esta semana (puedes ver el repositorio y el calendario <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-02/readme.md">aquí</a>) se trata de los anuncios del Super Tazón.</p>
-<p>Utiliza las bibliotecas que vimos en clase para hacer una visualición como más te guste.</p>
-<ol style="list-style-type: decimal">
-<li><p>Carga las bibliotecas.</p></li>
-<li><p>Carga los datos y exploralos con <code>glimpse</code>.</p></li>
-</ol>
-<pre class="r"><code>youtube &lt;- readr::read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-02/youtube.csv&#39;)</code></pre>
-<pre><code>## 
-## -- Column specification -----------------------------------------
-## cols(
-##   .default = col_character(),
-##   year = col_double(),
-##   funny = col_logical(),
-##   show_product_quickly = col_logical(),
-##   patriotic = col_logical(),
-##   celebrity = col_logical(),
-##   danger = col_logical(),
-##   animals = col_logical(),
-##   use_sex = col_logical(),
-##   view_count = col_double(),
-##   like_count = col_double(),
-##   dislike_count = col_double(),
-##   favorite_count = col_double(),
-##   comment_count = col_double(),
-##   published_at = col_datetime(format = &quot;&quot;),
-##   category_id = col_double()
-## )
-## i Use `spec()` for the full column specifications.</code></pre>
-<p>¿Qué observas de la base?, ¿qué datos te podrían servir para graficar algo?</p>
-<p>Hay un grupo de variables dicotómicas que permite observar el principal característica de cada comercial, ¿cómo podrías usarlo?</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Planea tu gráfica. En una hoja de papel o lienzo de paint dibuja cómo imaginas tu gráfica.</li>
-</ol>
-<p>Algunas ideas:</p>
-<ul>
-<li>¿Cuál es la empresa que más comerciales ha tenido para el medio tiempo del Súper Bowl?</li>
-</ul>
-<pre class="r"><code>conteo_marca &lt;- youtube %&gt;% 
-  count(brand) %&gt;% 
-  arrange(-n)
-
-
-ggplot(conteo_marca,
-       aes(x=reorder(brand, -n), 
-           y=n)) +
-  geom_col()</code></pre>
-<p><img src="t1_files/figure-html/unnamed-chunk-3-1.png" /><!-- --></p>
-<ul>
-<li>¿Qué empresa ha tenido más vistas a través de los años?</li>
-</ul>
-<pre class="r"><code>vistas &lt;- youtube %&gt;%
-  group_by(brand) %&gt;% 
-  summarise(vistas_totales = sum(like_count, na.rm=T)) 
-
-ggplot(vistas,
-       aes(x=brand,
-       y=vistas_totales/1000)
-       ) +
-  ggalt::geom_lollipop()</code></pre>
-<p><img src="t1_files/figure-html/unnamed-chunk-4-1.png" /><!-- --></p>
-<ul>
-<li><p><strong>¿Cuál es la empresa más odiada?</strong> Puedes hacer una variable con <code>mutate</code> que de el total de <em>likes</em> menos <em>dislikes</em>, agrupar por marca, sumarizar el promedio de ese número y graficarla con un <code>geom_col</code>.</p></li>
-<li><p><strong>¿El uso de sexo para vender se ha acentuado con los años?</strong> Al ser dicotómica, la variable <code>use_sex</code> puede ser sumada como un número. Utiliza esa característica para sumar el número de comerciales que tienen como tema principal el sexo para vender agrupados por años. Grafica con una línea.</p></li>
-</ul>
-<p>Recuerda que puedes usar <code>facet_wrap()</code> o una animación para aprovechar la variable “year”-</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Usa <code>theme()</code> o alguno de los temas precargados para modificar lo que no te guste y añade las <code>labs()</code> necesarias.</li>
-</ol>
+<div id="en-construcción" class="section level1">
+<h1>En construcción</h1>
+<p>⚠🛠⚠</p>
+</div>
 
 
 

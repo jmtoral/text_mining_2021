@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -391,10 +391,10 @@ div.tocify {
 
 <h1 class="title toc-ignore">Syllabus</h1>
 <h3 class="subtitle"><h4 style="font-style:normal">
-Curso introductorio al lenguaje R
+Introducción al análisis cuantitativo de textos en R
 </h4></h3>
 <h4 class="date"><h4 style="font-style:normal">
-Febrero/Marzo 2021
+Agosto 2021
 </h4></h4>
 
 </div>
@@ -433,38 +433,93 @@ h2.title {
 </style>
 <p><br />
 </p>
-<div id="sesión-1" class="section level2">
-<h2>Sesión 1</h2>
+<div id="sesión-1-cómo-proceso-cadenas-de-texto-como-datos" class="section level2">
+<h2>Sesión 1: ¿Cómo proceso cadenas de texto como datos?</h2>
+<div id="breve-repaso-del-tidyverse" class="section level3">
+<h3>Breve repaso del <em>tidyverse</em></h3>
+<ul>
+<li>Repaso breve de las 5 funciones</li>
+<li>Uso de las funciones para cadenas de texto <code>str_</code></li>
+<li>Breve introducción a las expresiones regulares</li>
+</ul>
+</div>
 <div id="procesamiento-y-lectura-de-textos" class="section level3">
 <h3>Procesamiento y lectura de textos</h3>
 <ul>
-<li>Ve.-…</li>
+<li>¿Cómo leo datos desde PDF / EPUBs / archivos de texto?</li>
+<li>Ordenar, estructurar y limpiar cadenas de texto</li>
+<li>¿Qué es un <em>corpus</em> y para qué sirve?</li>
 </ul>
-<div style="margin-bottom:25px;">
-
-</div>
 </div>
 <div id="scraping-básico" class="section level3">
 <h3>Scraping básico</h3>
 <ul>
-<li>Con …</li>
+<li>¿Cómo obtengo datos de manera sistemática de algún lugar de internet?</li>
 </ul>
-<div style="margin-bottom:25px;">
-
+</div>
+<div id="introducción-a-tidytext" class="section level3">
+<h3>Introducción a <code>tidytext</code></h3>
+<ul>
+<li>Como <em>desanidar tokens</em> con <code>unnest_tokens</code> y contarlos.</li>
+</ul>
 </div>
 </div>
-<div id="trabajo-de-encuestas-y-uso-de-directorios" class="section level3">
-<h3>Trabajo de encuestas y uso de directorios</h3>
-<div style="margin-bottom:25px;">
-
+<div id="sesión-2-cómo-analizar-las-palabras" class="section level2">
+<h2>Sesión 2: ¿Cómo analizar las palabras?</h2>
+<div id="introducción-al-análisis-cuantitativo-de-textos" class="section level3">
+<h3>Introducción al análisis cuantitativo de textos</h3>
+<ul>
+<li>Ley de Zipf</li>
+<li>Conteo de tokens y <em>n-gramas¨</em></li>
+<li>Relaciones entre palabras</li>
+</ul>
+</div>
+<div id="el-documento-como-unidad-de-análisis" class="section level3">
+<h3>El documento como unidad de análisis</h3>
+<ul>
+<li>Cálculo y uso del <em>tf_idf</em></li>
+</ul>
+</div>
+<div id="introducción-al-análisis-de-sentimientos" class="section level3">
+<h3>Introducción al análisis de sentimientos</h3>
+<ul>
+<li>Análisis de sentimientos por el método de diccionario</li>
+</ul>
+</div>
+<div id="similitud-entre-documentos" class="section level3">
+<h3>Similitud entre documentos</h3>
+<ul>
+<li>Distancias euclideanas</li>
+</ul>
 </div>
 </div>
-<div id="una-provocación-a-los-modelos-de-predicción" class="section level3">
-<h3>Una provocación a los modelos de predicción</h3>
-<div style="margin-bottom:25px;">
-
+<div id="sesión-3-modelos-de-clasificación" class="section level2">
+<h2>Sesión 3: Modelos de clasificación</h2>
+<ul>
+<li>Preparación para modelar
+<ul>
+<li>Remover palabras vacías (<em>stopwords</em>)</li>
+<li>Extraer las stemas</li>
+<li>Etiquetado de elementos del discurso</li>
+</ul></li>
+<li>Métodos de categorías conocidas:
+<ul>
+<li>Impelementación práctica de la regresión lineal</li>
+<li>Implementación práctica Naive Bayes para NLP</li>
+<li>Implementación práctica de Lasso para NLP</li>
+</ul></li>
+</ul>
 </div>
-</div>
+<div id="sesión-4-más-modelos" class="section level2">
+<h2>Sesión 4: Más modelos</h2>
+<ul>
+<li>Métodos de clasificación con categorías no conocidas
+<ul>
+<li>Distribución latente de Dirichlet</li>
+<li>Distribución latente de Dirichlet con semillas</li>
+</ul></li>
+<li>Vectorización de textos</li>
+</ul>
 </div>
 
 
