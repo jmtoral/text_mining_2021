@@ -106,7 +106,7 @@ h2.title {
 - Etiquetado de elementos del discurso
     
 ### Métodos de categorías conocidas:
-- Impelementación práctica de la regresión lineal
+- Implementación práctica de la regresión lineal
 - Implementación práctica Naive Bayes para NLP
 - Implementación práctica de Lasso para NLP
 
