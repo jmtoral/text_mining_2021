@@ -100,15 +100,15 @@ h2.title {
 
 ## Sesión 3: Modelos de clasificación
 
-- Preparación para modelar
-    - Remover palabras vacías (*stopwords*)
-    - Extraer las stemas
-    - Etiquetado de elementos del discurso
+### Preparación para modelar
+- Remover palabras vacías (*stopwords*)
+- Extraer las stemas
+- Etiquetado de elementos del discurso
     
-- Métodos de categorías conocidas:
-    - Impelementación práctica de la regresión lineal
-    - Implementación práctica Naive Bayes para NLP
-    - Implementación práctica de Lasso para NLP
+### Métodos de categorías conocidas:
+- Impelementación práctica de la regresión lineal
+- Implementación práctica Naive Bayes para NLP
+- Implementación práctica de Lasso para NLP
 
 <br/><br/>
 <br/><br/>
@@ -116,8 +116,8 @@ h2.title {
 
 ## Sesión 4: Más modelos
 
-- Métodos de clasificación con categorías no conocidas
-    - Distribución latente de Dirichlet
-    - Distribución latente de Dirichlet con semillas
+### Métodos de clasificación con categorías no conocidas
+- Distribución latente de Dirichlet
+- Distribución latente de Dirichlet con semillas
 
-- Vectorización de textos 
+### Vectorización de textos 
