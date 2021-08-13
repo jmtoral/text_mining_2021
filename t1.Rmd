@@ -1,7 +1,7 @@
 ---
 title: "Tarea 1"
 subtitle: <h4 style="font-style:normal">Tarea 1</h4>
-date: <h4 style="font-style:normal">Febrero/MArzo 2021</h4>
+date: <h4 style="font-style:normal">2021-08-12</h4>
 output: 
   html_document:
     toc: true

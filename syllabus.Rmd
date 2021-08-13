@@ -1,7 +1,7 @@
 ---
 title: "Syllabus"
 subtitle: <h4 style="font-style:normal">Introducción al análisis cuantitativo de textos en R</h4>
-date: <h4 style="font-style:normal">Agosto 2021</h4>
+date: <h4 style="font-style:normal">2021-08-12</h4>
 output: 
   html_document:
     toc: true
@@ -70,7 +70,9 @@ h2.title {
 
 - Como *desanidar tokens* con `unnest_tokens` y contarlos.
 
-
+<br/><br/>
+<br/><br/>
+<br/><br/>
 
 ## Sesión 2: ¿Cómo analizar las palabras?
 
@@ -92,7 +94,9 @@ h2.title {
 ### Similitud entre documentos
 - Distancias euclideanas
 
-
+<br/><br/>
+<br/><br/>
+<br/><br/>
 
 ## Sesión 3: Modelos de clasificación
 
@@ -106,6 +110,9 @@ h2.title {
     - Implementación práctica Naive Bayes para NLP
     - Implementación práctica de Lasso para NLP
 
+<br/><br/>
+<br/><br/>
+<br/><br/>
 
 ## Sesión 4: Más modelos
 
