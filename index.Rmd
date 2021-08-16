@@ -213,7 +213,7 @@ Este curso está construido en mayor o menor medida con base en siguientes mater
   
 - [Hanck et al. - Introduction to Econometrics with R](https://www.econometrics-with-r.org/1-introduction.html)
 
-- [Field et a. - Discovering Statistics Using R](https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067). Este libro es bastante didactivo, pero un poco infantil para lectorxs más maduros.
+- [Field et a. - Discovering Statistics Using R](https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067). Este libro es bastante didáctico, pero un poco infantil para personas más maduras.
 
 - [Sheather - A Modern Approach to Regression with R](https://www.springer.com/la/book/9780387096070). El código se encuentra [aquí](https://www.stat.tamu.edu/~sheather/book/).
 
