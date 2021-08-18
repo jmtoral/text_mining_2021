@@ -59,6 +59,10 @@ h2.title {
 * Un syllabus con las sesiones y temas que veremos
 * El código que usaremos en las sesiones
 * Laboratorios y tareas
+<br>
+<br>
+<br>
+<br>
 
 
 ## Acerca del curso
@@ -72,6 +76,12 @@ Es por eso que se utilizará el lenguaje humano como insumo para poder entender 
 - Identificar el sentimiento de ciertas palabras para conocer el tono de ciertos textos
 - Analizar qué tan parecidos son algunos textos
 
+<br>
+<br>
+<br>
+<br>
+
+
 ## Fechas 📆, horarios ⏱ y costo 💸 
 
 El curso tiene una duración de 16 horas clase + asesoría para proyectos propios.
@@ -80,10 +90,17 @@ El curso tiene una duración de 16 horas clase + asesoría para proyectos propio
 
 - De **10 am a 2 pm** (4 horas por sesión)
 
-El curso tiene un costo de **3,000** pesos mexicanos en total (se emiten facturas). Se puede pagar por transferencia o por [PayPal](https://www.paypal.com/paypalme/manueltoral).
-
+El curso tiene un costo de **3,000** pesos mexicanos en total (se emiten facturas).
 
 <br>
+<br>
+<br>
+<br>
+
+<br>
+
+
+## 📚 Materiales y referencias
 
 Los principales materiales que usaremos son los  siguientes:
 
@@ -100,11 +117,20 @@ Los principales materiales que usaremos son los  siguientes:
 
 - [Cornelius Puschmann - Advancing Text Mining with R and quanteda](https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/advancing-text-mining/)
 
+-[Marín Benjumea - Expresiones regulares](https://rpubs.com/ydmarinb/429756)
+
 <br>
 <br>
 <br>
 <br>
 
+## 🤓 Artículos académicos 
+
+John Wilkerson and Andreu Casas (2017), Large-Scale Computerized Text Analysis in Political Science: Opportunities and Challenges *Annual Review of Political Science*, 20:1, 529-544 [enlace](https://www.annualreviews.org/doi/pdf/10.1146/annurev-polisci-052615-025542) 
+
+Grimmer, J., & Stewart, B. (2013). Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts. *Political Analysis*, 21(3), 267-297. doi:10.1093/pan/mps028 [enlace](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F7AAC8B2909441603FEB25C156448F20/S1047198700013401a.pdf/text-as-data-the-promise-and-pitfalls-of-automatic-content-analysis-methods-for-political-texts.pdf) 
+
+🔥 El trabajo de Dan Berliner [enlace](http://www.danielberliner.com/research.html)
 
 ## ¿ Cómo instalo (y uso) `R`?
 
@@ -211,7 +237,7 @@ Este curso está construido en mayor o menor medida con base en siguientes mater
   
 - [Hanck et al. - Introduction to Econometrics with R](https://www.econometrics-with-r.org/1-introduction.html)
 
-- [Field et a. - Discovering Statistics Using R](https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067). Este libro es bastante didactivo, pero un poco infantil para lectorxs más maduros.
+- [Field et a. - Discovering Statistics Using R](https://uk.sagepub.com/en-gb/eur/discovering-statistics-using-r/book236067). Este libro es bastante didáctico, pero un poco infantil para personas más maduras.
 
 - [Sheather - A Modern Approach to Regression with R](https://www.springer.com/la/book/9780387096070). El código se encuentra [aquí](https://www.stat.tamu.edu/~sheather/book/).
 
@@ -248,6 +274,7 @@ Algunos repositorios recomendados para buscar buenas bases de datos.
 - [Open ICPSR](https://www.openicpsr.org/openicpsr/)
 - [UK Data Service](http://reshare.ukdataservice.ac.uk/)
 - [Empirical Studies of Conflict](https://esoc.princeton.edu/)
+- [datamx - La plataforma cívica de datos abiertos de México](http://datamx.io/)
 
 
 <br>
