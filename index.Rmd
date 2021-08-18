@@ -119,7 +119,9 @@ Los principales materiales que usaremos son los  siguientes:
 
 - [Cornelius Puschmann - Advancing Text Mining with R and quanteda](https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/advancing-text-mining/)
 
--[Marín Benjumea - Expresiones regulares](https://rpubs.com/ydmarinb/429756)
+- [Marín Benjumea - Expresiones regulares](https://rpubs.com/ydmarinb/429756)
+
+- [Urdinez y Cruz Labrín - AnalizaR Datos Políticos](https://arcruz0.github.io/libroadp/index.html)
 
 <br>
 <br>
@@ -133,6 +135,19 @@ John Wilkerson and Andreu Casas (2017), Large-Scale Computerized Text Analysis i
 Grimmer, J., & Stewart, B. (2013). Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts. *Political Analysis*, 21(3), 267-297. doi:10.1093/pan/mps028 [enlace](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F7AAC8B2909441603FEB25C156448F20/S1047198700013401a.pdf/text-as-data-the-promise-and-pitfalls-of-automatic-content-analysis-methods-for-political-texts.pdf) 
 
 🔥 El trabajo de Dan Berliner [enlace](http://www.danielberliner.com/research.html)
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
 
 ## ¿ Cómo instalo (y uso) `R`?
 
@@ -184,6 +199,11 @@ Es importante tener LaTeX para crear documentos en PDF. Para instalarlo, hay que
 
 <br>
 
+<br>
+<br>
+<br>
+<br>
+
 
 ## Textos, libros y materiales
 
@@ -220,6 +240,11 @@ Hay, realmente, miles de materiales excelentes para aprender `R`. En mi experien
 
 <br>
 
+
+<br>
+<br>
+<br>
+<br>
 
 #### RMarkdown y otras herramientas
 
@@ -258,6 +283,12 @@ Este curso está construido en mayor o menor medida con base en siguientes mater
 - [Claudia Engel - Using Spatial Data in R](https://cengel.github.io/R-spatial/)
 
 - [Corey Sparks](https://rpubs.com/corey_sparks)
+
+<br>
+<br>
+<br>
+<br>
+
 
 ## Repositorios de bases de datos
 
