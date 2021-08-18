@@ -18,10 +18,6 @@ navbar:
       menu:
         - text: "Sesión 1"
           href: s1.html
-        - text: "Sesión 2"
-          href: s2.html 
-        - text: "Sesión 3"
-          href: s3.html 
     - text: "Tareas"
       menu:
         - text: "Tarea 1"
